@@ -1,5 +1,6 @@
 package com.fireb.viewmodelpractice.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -7,11 +8,14 @@ import com.fireb.viewmodelpractice.model.PaymentDetails
 import com.fireb.viewmodelpractice.model.Repository
 
 class MyViewModel : ViewModel() {
-    private var paymentList : LiveData<List<PaymentDetails>>
+    var paymentList : LiveData<List<PaymentDetails>>
+
     private val results = Repository()
     init {
         val listOfPeople = results.getDataList()
         paymentList = listOfPeople
+
+
     }
 
 

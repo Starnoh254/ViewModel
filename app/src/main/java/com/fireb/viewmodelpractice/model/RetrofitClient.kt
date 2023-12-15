@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
 
-    private const val BASE_URL = "http://pickerapp.pythonanywhere.com/api/"
+    private const val BASE_URL = "https://pickerapp.pythonanywhere.com/api/"
 
     private val retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL)
